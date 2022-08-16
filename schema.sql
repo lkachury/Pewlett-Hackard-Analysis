@@ -181,3 +181,19 @@ ON (de.dept_no = d.dept_no);
 -- Confirm the table
 SELECT * FROM dept_info
 
+-- Tailored List: Sales department info
+SELECT *
+INTO sales_info
+FROM dept_info 
+WHERE dept_name = 'Sales';
+-- Confirm the table
+SELECT * FROM sales_info
+
+-- Tailored List: Sales and Development departments info
+SELECT *
+INTO sales_and_dev_info
+FROM dept_info 
+WHERE dept_name IN ('Sales','Development');
+-- Confirm the table
+SELECT * FROM sales_and_dev_info
+
