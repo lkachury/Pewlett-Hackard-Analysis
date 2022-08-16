@@ -17,13 +17,13 @@ The ERD (Entity Relationship Diagram) below was built from the six Source Data C
 <br /> ![EmployeeDB](https://user-images.githubusercontent.com/108038989/185003521-737ddff9-d366-40f2-b2dc-716ac5378778.png)
 
 ## Results
-The full SQL query can be referenced here: 
+The full SQL query can be referenced here: /n
 https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_Database_challenge.sql
 
 ### Deliverable 1: The Number of Retiring Employees by Title
 > Using the ERD as a reference and SQL queries, create a Retirement Titles table that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955. Because some employees may have multiple titles in the database—for example, due to promotions—you’ll need to use the DISTINCT ON statement to create a table that contains the most recent title of each employee. Then, use the COUNT() function to create a table that has the number of retirement-age employees by most recent job title. Finally, because we want to include only current employees in our analysis, be sure to exclude those employees who have already left the company.
 
-- Retirement Titles Table
+#### Retirement Titles Table
 A Retirement Titles table was created that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955 with the following instructions and query code:
 > 1. Retrieve the emp_no, first_name, and last_name columns from the Employees table.
 > 2. Retrieve the title, from_date, and to_date columns from the Titles table.
@@ -36,8 +36,7 @@ A Retirement Titles table was created that holds all the titles of employees who
 The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retirement_titles.csv).
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184791268-82ada60b-54f1-4f48-9a32-ed0e313e4fc6.png)
 
-
-- Unique Titles
+#### Unique Titles
 There are duplicate entries for some employees because they have switched titles over the years. The duplicates were removed with the following code and kept only the most recent title of each employee:
 
 Retrieve the employee number, first and last name, and title columns from the Retirement Titles table.
