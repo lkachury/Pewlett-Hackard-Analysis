@@ -1,34 +1,43 @@
 # Pewlett-Hackard-Analysis
 
 ## Overview 
-The purpose of this analysis is to use SQL to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program given that many current employees are reaching retirement age.
+Pewlett-Hackard is a large company with a rapidly retiring baby boomer employee force and their upcoming retirements will leave thousands of job openings. The company is offering retirement packages for eligible employees and needs to know what positions will need to be filled in the near future. The purpose of this analysis is to use SQL to determine the number of retiring employees per title and identify employees who are eligible to participate in a mentorship program. This analysis will help prepare the company's HR team for the “silver tsunami” as many current employees reach retirement age.
 
+## Resources
+### Software
+- QuickDBD
+- Python 3.7.6
+- PostgreSQL and pgAdmin 6.8
+- Visual Studio Code 1.69
+### Data Source
+- [Six CSVs](https://github.com/lkachury/Pewlett-Hackard-Analysis/tree/main/Data/Data%20Source%20CSVs) 
+
+## ERD and Schema
+The ERD (Entity Relationship Diagram) below was built from the six Source Data CSVs using this [schema](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/schema.sql): 
+<br /> ![EmployeeDB](https://user-images.githubusercontent.com/108038989/185003521-737ddff9-d366-40f2-b2dc-716ac5378778.png)
 
 ## Results
-There is a bulleted list with four major points from the two analysis deliverables.
-The full SQL queries can be referenced here: 
+The full SQL query can be referenced here: 
 https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_Database_challenge.sql
 
 ### Deliverable 1: The Number of Retiring Employees by Title
-Using the ERD previously created as a reference and SQL queries, create a Retirement Titles table that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955. Because some employees may have multiple titles in the database—for example, due to promotions—you’ll need to use the DISTINCT ON statement to create a table that contains the most recent title of each employee. Then, use the COUNT() function to create a table that has the number of retirement-age employees by most recent job title. Finally, because we want to include only current employees in our analysis, be sure to exclude those employees who have already left the company.
+> Using the ERD as a reference and SQL queries, create a Retirement Titles table that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955. Because some employees may have multiple titles in the database—for example, due to promotions—you’ll need to use the DISTINCT ON statement to create a table that contains the most recent title of each employee. Then, use the COUNT() function to create a table that has the number of retirement-age employees by most recent job title. Finally, because we want to include only current employees in our analysis, be sure to exclude those employees who have already left the company.
 
-#### Retirement Titles
-First, a Retirement Titles table was created that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955 with the following code:
+- Retirement Titles Table
+A Retirement Titles table was created that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955 with the following instructions and query code:
+> 1. Retrieve the emp_no, first_name, and last_name columns from the Employees table.
+> 2. Retrieve the title, from_date, and to_date columns from the Titles table.
+> 3. Create a new table using the INTO clause.
+> 4. Join both tables on the primary key.
+> 5. Filter the data on the birth_date column to retrieve the employees who were born between 1952 and 1955. Then, order by the employee number.
 
-Retrieve the emp_no, first_name, and last_name columns from the Employees table.
-Retrieve the title, from_date, and to_date columns from the Titles table.
-Create a new table using the INTO clause.
-Join both tables on the primary key.
-Filter the data on the birth_date column to retrieve the employees who were born between 1952 and 1955. Then, order by the employee number.
-
-A query is written and executed to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955.
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184790961-91d2427b-a9e1-4ab8-bbee-7b660b6bbcde.png)
 
-The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/retirement_titles.csv).
+The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retirement_titles.csv).
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184791268-82ada60b-54f1-4f48-9a32-ed0e313e4fc6.png)
 
 
-#### Unique Titles
+- Unique Titles
 There are duplicate entries for some employees because they have switched titles over the years. The duplicates were removed with the following code and kept only the most recent title of each employee:
 
 Retrieve the employee number, first and last name, and title columns from the Retirement Titles table.
