@@ -78,7 +78,7 @@ Join the Employees and the Titles tables on the primary key.
 
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184796485-7e1d9829-fd27-430d-8d99-8ea2473b39ca.png)
 
-The Mentorship Eligibility table was exported as [mentorship_eligibilty.csv]():
+The Mentorship Eligibility table was exported as [mentorship_eligibilty.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/mentorship_eligibility.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184796674-198b8afd-9f6d-42d8-99ea-9c2c0bfb241e.png)
 
 
