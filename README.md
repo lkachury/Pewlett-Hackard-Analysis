@@ -17,7 +17,7 @@ The ERD (Entity Relationship Diagram) below was built from the six Source Data C
 <br /> ![EmployeeDB](https://user-images.githubusercontent.com/108038989/185003521-737ddff9-d366-40f2-b2dc-716ac5378778.png)
 
 ## Results
-The full SQL query can be referenced here: \n
+The full SQL query can be referenced here: <br />
 https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_Database_challenge.sql
 
 ### Deliverable 1: The Number of Retiring Employees by Title
