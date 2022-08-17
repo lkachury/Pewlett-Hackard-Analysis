@@ -50,17 +50,14 @@ The Unique Titles table was exported as [unique_titles.csv](https://github.com/l
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184792559-b9ca5202-b929-4384-9b5c-42158331169d.png)
 
 #### Retiring Titles
-Another query was used to retrieve the the number of employees by their most recent job title who are about to retire. First, retrieve the number of titles from the Unique Titles table. Then, create a Retiring Titles table to hold the required information. Group the table by title, then sort the count column in descending order.
-Code: 
+The number of employees by their most recent job title who are about to retire were queried by first retrieving the number of titles from the Unique Titles table and then creating a Retiring Titles table to hold the required information with the following instructions and query code: 
+  > 1. First, retrieve the number of titles from the Unique Titles table.
+  > 2. Then, create a Retiring Titles table to hold the required information.
+  > 3. Group the table by title, then sort the count column in descending order.
 
-First, retrieve the number of titles from the Unique Titles table.
-Then, create a Retiring Titles table to hold the required information.
-Group the table by title, then sort the count column in descending order.
-
-A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184793673-e0097e8e-d132-4a6d-8bd0-bfe29a45784e.png)
 
-The Retiring Titles table was exported as [retiring_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/retiring_titles.csv).
+The Retiring Titles table was exported as [retiring_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retiring_titles.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184793621-237db3c3-d0ff-4570-a456-d952e743acaf.png)
 
 ### Deliverable 2: The Employees Eligible for the Mentorship Program
