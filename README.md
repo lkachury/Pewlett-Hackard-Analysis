@@ -81,8 +81,23 @@ The Mentorship Eligibility table was exported as [mentorship_eligibilty.csv](htt
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184796674-198b8afd-9f6d-42d8-99ea-9c2c0bfb241e.png)
 
 ## Summary
-Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
-- How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-- Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+### How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
-The summary addresses the two questions and contains two additional queries or tables that may provide more insight
+From the Retiring Titles table in Deliverable 1, the total number of roles retiring is 72,458 with the largest number of retiring employees being Senior Engineer (25,916) and Senior Staff (24,926). An additional query we can ask the database here is to look at the number of retiring employees for each department to determine which departments should be prioritized. 
+
+The department name was first added to a new table for each retiring employee with the following code:
+![image](https://user-images.githubusercontent.com/108038989/185016983-2e69bf5c-30cc-449d-a5ad-ffacb5320f5b.png)
+
+This generated a Unique Departments table that was exported as [unique_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/unique_departments.csv):
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185017197-92835bf1-10a3-470c-88b1-ff47afb7b34b.png)
+
+The number of retiring employees for each department was retrieved from this Unique Departments table and a Retiring Departments table was generated with the following code:
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185018077-dc467470-9560-4ca0-bff7-42b4c3e1f710.png)
+
+This generated a Retiring Departments table that was exported as [retiring_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retiring_departments.csv):
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185019171-9b02f15f-45bd-4ae9-beb9-1724aafe3821.png)
+
+From this table, the most heavily impacted departments will be Development with 19,391 retiring employees (26.8% of all retiring employees) and Production with 17,784 retiring employees (24.5% of all retiring employees). 
+
+### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+An additional query we can ask here is 
