@@ -97,7 +97,7 @@ The number of retiring employees for each department was retrieved from this Uni
 This generated a Retiring Departments table that was exported as [retiring_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retiring_departments.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/185019171-9b02f15f-45bd-4ae9-beb9-1724aafe3821.png)
 
-From this table, the most heavily impacted departments will be Development with 19,391 retiring employees and Production with 17,784 retiring employees. 
+From this table, the most heavily impacted departments will be Development with 19,391 retiring employees (26.8% of all retiring employees) and Production with 17,784 retiring employees (24.5% of all retiring employees). 
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 An additional query we can ask here is 
