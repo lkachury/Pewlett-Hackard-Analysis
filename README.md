@@ -25,34 +25,29 @@ https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_
 
 #### Retirement Titles Table
 A Retirement Titles table was created that holds all the titles of employees who were born between January 1, 1952 and December 31, 1955 with the following instructions and query code:
-> 1. Retrieve the emp_no, first_name, and last_name columns from the Employees table.
-> 2. Retrieve the title, from_date, and to_date columns from the Titles table.
-> 3. Create a new table using the INTO clause.
-> 4. Join both tables on the primary key.
-> 5. Filter the data on the birth_date column to retrieve the employees who were born between 1952 and 1955. Then, order by the employee number.
+  > 1. Retrieve the emp_no, first_name, and last_name columns from the Employees table.
+  > 2. Retrieve the title, from_date, and to_date columns from the Titles table.
+  > 3. Create a new table using the INTO clause.
+  > 4. Join both tables on the primary key.
+  > 5. Filter the data on the birth_date column to retrieve the employees who were born between 1952 and 1955. Then, order by the employee number.
 
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184790961-91d2427b-a9e1-4ab8-bbee-7b660b6bbcde.png)
 
-The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retirement_titles.csv).
+The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retirement_titles.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184791268-82ada60b-54f1-4f48-9a32-ed0e313e4fc6.png)
 
 #### Unique Titles
-There are duplicate entries for some employees because they have switched titles over the years. The duplicates were removed with the following code and kept only the most recent title of each employee:
+There are duplicate entries for some employees because they have switched titles over the years. The duplicates were removed with the following instructions and query code to keep only the most recent title of each employee:
+  > 1. Retrieve the employee number, first and last name, and title columns from the Retirement Titles table.
+  > 2. Use the DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
+  > 3. Exclude those employees that have already left the company by filtering on to_date to keep only those dates that are equal to '9999-01-01'.
+  > 4. Create a Unique Titles table using the INTO clause.
+  > 5. Sort the Unique Titles table in ascending order by the employee number and descending order by the last date (i.e., to_date) of the most recent title.
 
-Retrieve the employee number, first and last name, and title columns from the Retirement Titles table.
-These columns will be in the new table that will hold the most recent title of each employee.
-Use the DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
-Exclude those employees that have already left the company by filtering on to_date to keep only those dates that are equal to '9999-01-01'.
-Create a Unique Titles table using the INTO clause.
-Sort the Unique Titles table in ascending order by the employee number and descending order by the last date (i.e., to_date) of the most recent title.
-
-
-A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184792430-b8f741ff-4b29-4cd3-8cc5-3abb88836f2b.png)
 
-The Unique Titles table was exported as [unique_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/unique_titles.csv):
+The Unique Titles table was exported as [unique_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/unique_titles.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184792559-b9ca5202-b929-4384-9b5c-42158331169d.png)
-
 
 #### Retiring Titles
 Another query was used to retrieve the the number of employees by their most recent job title who are about to retire. First, retrieve the number of titles from the Unique Titles table. Then, create a Retiring Titles table to hold the required information. Group the table by title, then sort the count column in descending order.
