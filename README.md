@@ -92,10 +92,10 @@ This generated a Unique Departments table that was exported as [unique_departmen
 <br /> ![image](https://user-images.githubusercontent.com/108038989/185017197-92835bf1-10a3-470c-88b1-ff47afb7b34b.png)
 
 The number of retiring employees for each department was retrieved from by this Unique Departments table and a retiring Departments table was generated with the following code:
-![image](https://user-images.githubusercontent.com/108038989/185018077-dc467470-9560-4ca0-bff7-42b4c3e1f710.png)
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185018077-dc467470-9560-4ca0-bff7-42b4c3e1f710.png)
 
 This generated a Retiring Departments table that was exported as [retiring_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retiring_departments.csv):
-<br /> ![image](https://user-images.githubusercontent.com/108038989/185017503-22429568-1e32-4878-b9ac-01e5f705893b.png)
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185018947-c37b5c96-f2f1-4c0f-96c7-2a3ed57b091c.png)
 
 From this table, the most heavily impacted departments will be Development with 19,391 retiring employees and Production with 17,784 employees. 
 
