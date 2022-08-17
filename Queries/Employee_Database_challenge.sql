@@ -66,3 +66,37 @@ ORDER BY e.emp_no;
 --Confirm table correctly made
 SELECT * FROM mentorship_eligibilty;
 
+-------------------------------------------------------------------
+-- Deliverable 3: Additional Queries
+-------------------------------------------------------------------
+
+-- Unique Departments 
+SELECT DISTINCT ON (rt.emp_no)
+	rt.emp_no, 
+	rt.first_name,
+	rt.last_name,
+	rt.title,
+	d.dept_name
+INTO unique_departments
+FROM retirement_titles as rt
+INNER JOIN dept_emp as de
+ON (rt.emp_no = de.emp_no)
+INNER JOIN departments as d
+ON (d.dept_no = de.dept_no)
+WHERE rt.to_date = '9999-01-01'
+ORDER BY rt.emp_no, rt.to_date DESC;
+--Confirm table correctly made
+SELECT * FROM unique_departments;
+
+-- Retiring Departments
+SELECT COUNT(ud.dept_name),
+	ud.dept_name
+INTO retiring_departments
+FROM unique_departments as ud
+GROUP BY ud.dept_name
+ORDER BY COUNT DESC;
+--Confirm table correctly made
+SELECT * FROM retiring_departments;
+
+------------------------------------
+
