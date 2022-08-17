@@ -100,4 +100,13 @@ This generated a Retiring Departments table that was exported as [retiring_depar
 From this table, the most heavily impacted departments will be Development with 19,391 retiring employees (26.8% of all retiring employees) and Production with 17,784 retiring employees (24.5% of all retiring employees). 
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-An additional query we can ask here is 
+From the Mentorship Eligibility table in Deliverable 2, there are 1,549 retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees. With 72,458 retiring employees, this does not appear to be enough. A potential solution to this is to increase the age range by 5 years in both directions to range from 1960-1970 and then to focus on employees with leadership positions (Senior Engineer and Senior Staff) which also happens to be the roles with the highest number of retiring employees:
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185026640-001f27c1-94e6-4199-851c-d4dc6324483e.png)
+
+This generated a new Qualified Mentorship Eligibility table that was exported as [qualified_mentors.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/qualified_mentors.csv)
+<br /> ![image](https://user-images.githubusercontent.com/108038989/185026869-c9b100f4-2045-4f8c-86c6-07f8b8ccb74e.png)
+
+From this list, the new number of retirement-ready employees in the departments increases to 65,583 employees, which is more comparable to the 72,458 retiring employees.
+
+
+
