@@ -17,7 +17,7 @@ The ERD (Entity Relationship Diagram) below was built from the six Source Data C
 <br /> ![EmployeeDB](https://user-images.githubusercontent.com/108038989/185003521-737ddff9-d366-40f2-b2dc-716ac5378778.png)
 
 ## Results
-The full SQL query can be referenced here: /n
+The full SQL query can be referenced here: \n
 https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Queries/Employee_Database_challenge.sql
 
 ### Deliverable 1: The Number of Retiring Employees by Title
@@ -30,7 +30,6 @@ A Retirement Titles table was created that holds all the titles of employees who
   > 3. Create a new table using the INTO clause.
   > 4. Join both tables on the primary key.
   > 5. Filter the data on the birth_date column to retrieve the employees who were born between 1952 and 1955. Then, order by the employee number.
-
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184790961-91d2427b-a9e1-4ab8-bbee-7b660b6bbcde.png)
 
 The Retirement Titles table was exported as [retirement_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retirement_titles.csv):
@@ -43,7 +42,6 @@ There are duplicate entries for some employees because they have switched titles
   > 3. Exclude those employees that have already left the company by filtering on to_date to keep only those dates that are equal to '9999-01-01'.
   > 4. Create a Unique Titles table using the INTO clause.
   > 5. Sort the Unique Titles table in ascending order by the employee number and descending order by the last date (i.e., to_date) of the most recent title.
-
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184792430-b8f741ff-4b29-4cd3-8cc5-3abb88836f2b.png)
 
 The Unique Titles table was exported as [unique_titles.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/unique_titles.csv):
