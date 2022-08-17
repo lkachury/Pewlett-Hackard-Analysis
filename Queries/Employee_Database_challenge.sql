@@ -100,3 +100,24 @@ SELECT * FROM retiring_departments;
 
 ------------------------------------
 
+-- New Qualified Mentorship Eligibility table 
+SELECT DISTINCT ON(e.emp_no)
+			e.emp_no,
+			e.first_name,
+			e.last_name,
+			e.birth_date,
+			de.from_date,
+			de.to_date,
+			ti.title
+INTO qualified_mentors
+FROM employees as e
+INNER JOIN dept_emp as de
+ON(e.emp_no=de.emp_no)
+INNER JOIN titles as ti
+ON(e.emp_no=ti.emp_no)
+WHERE (de.to_date='9999-01-01')
+AND (e.birth_date BETWEEN '1960-01-01' AND '1970-12-31')
+AND ti.title IN('Senior Engineer','Senior Staff')
+ORDER BY e.emp_no;
+--Confirm table correctly made
+SELECT * FROM qualified_mentors;
