@@ -61,26 +61,24 @@ The Retiring Titles table was exported as [retiring_titles.csv](https://github.c
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184793621-237db3c3-d0ff-4570-a456-d952e743acaf.png)
 
 ### Deliverable 2: The Employees Eligible for the Mentorship Program
-Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
+> Using the ERD as a reference and SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
 
 #### Mentorship Eligibility
-
-A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
-1. Retrieve the emp_no, first_name, last_name, and birth_date columns from the Employees table.
-Retrieve the from_date and to_date columns from the Department Employee table.
-Retrieve the title column from the Titles table.
-Use a DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
-Create a new table using the INTO clause.
-Join the Employees and the Department Employee tables on the primary key.
-Join the Employees and the Titles tables on the primary key.
-8. Filter the data on the to_date column to all the current employees, then filter the data on the birth_date columns to get all the employees whose birth dates are between January 1, 1965 and December 31, 1965.
-9. Order the table by the employee number.
+A Mentorship Eligibility table was created for current employees who were born between January 1, 1965 and December 31, 1965 with the following instructions and query code:
+  > 1. Retrieve the emp_no, first_name, last_name, and birth_date columns from the Employees table.
+  > 2. Retrieve the from_date and to_date columns from the Department Employee table.
+  > 3. Retrieve the title column from the Titles table.
+  > 4. Use a DISTINCT ON statement to retrieve the first occurrence of the employee number for each set of rows defined by the ON () clause.
+  > 5. Create a new table using the INTO clause.
+  > 6. Join the Employees and the Department Employee tables on the primary key.
+  > 7. Join the Employees and the Titles tables on the primary key.
+  > 8. Filter the data on the to_date column to all the current employees, then filter the data on the birth_date columns to get all the employees whose birth dates are between January 1, 1965 and December 31, 1965.
+  > 9. Order the table by the employee number.
 
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184796485-7e1d9829-fd27-430d-8d99-8ea2473b39ca.png)
 
-The Mentorship Eligibility table was exported as [mentorship_eligibilty.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/mentorship_eligibility.csv):
+The Mentorship Eligibility table was exported as [mentorship_eligibilty.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/mentorship_eligibility.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/184796674-198b8afd-9f6d-42d8-99ea-9c2c0bfb241e.png)
-
 
 ## Summary
 Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami."
