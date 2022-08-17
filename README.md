@@ -91,7 +91,7 @@ The department name was first added to a new table for each retiring employee wi
 This generated a Unique Departments table that was exported as [unique_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/unique_departments.csv):
 <br /> ![image](https://user-images.githubusercontent.com/108038989/185017197-92835bf1-10a3-470c-88b1-ff47afb7b34b.png)
 
-The number of retiring employees for each department was retrieved from by this Unique Departments table and a retiring Departments table was generated with the following code:
+The number of retiring employees for each department was retrieved from this Unique Departments table and a Retiring Departments table was generated with the following code:
 <br /> ![image](https://user-images.githubusercontent.com/108038989/185018077-dc467470-9560-4ca0-bff7-42b4c3e1f710.png)
 
 This generated a Retiring Departments table that was exported as [retiring_departments.csv](https://github.com/lkachury/Pewlett-Hackard-Analysis/blob/main/Data/Challenge%20CSVs/retiring_departments.csv):
